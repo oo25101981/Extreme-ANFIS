@@ -34,6 +34,7 @@ for Epoches=1:nEpochs,
     % Estimating random mf parameters
     for j=1:1:nInputs,
         for i=1:1:nMembershipFn,
+            % ctr2ctrDist(j): Attempted to access ctr2ctrDist(2); index out of bounds because numel(ctr2ctrDist)=1.
             c(j,i)=((rand-0.5)*ctr2ctrDist(j))+(minData(j)+(i-1)*ctr2ctrDist(j));
             a(j,i)=(rand-0.5)*rangeInput(j)/(2*nMembershipFn-2)*2+rangeInput(j)/(2*nMembershipFn-2);
             b(j,i)=rand*.2+1.9;
